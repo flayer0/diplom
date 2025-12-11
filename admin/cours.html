@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Преподаватели</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body class="bg-light">
+    <nav class="navbar  d-lg-none px-3">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+    </nav>
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Панель</h5>
+            <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex align-items-center mb-4">
+                <img src="../img/profile.png" class="rounded-circle me-3" width="50" height="50">
+                <div class="fw-semibold">Чупров Дмитрий</div>
+            </div>
+            <ul class="nav nav-pills flex-column gap-2">
+                <li><a class="nav-link text-white" href="index.html"><i class="bi bi-house me-2"></i>Главная</a></li>
+                <li><a class="nav-link text-white activee" href="teachers.html"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
+                <li><a class="nav-link text-white" href="courses.html"><i class="bi bi-journals me-2"></i>Курсы</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="d-flex">
+        <aside class="sidebar bg-dark text-white p-4 d-none d-lg-block">
+            <div class="d-flex align-items-center mb-4">
+                <img src="../img/profile.png" class="rounded-circle me-3" width="50" height="50">
+                <div class="fw-semibold">Чупров Дмитрий</div>
+            </div>
+            <ul class="nav nav-pills flex-column gap-2">
+                <li><a class="nav-link text-white" href="index.html"><i class="bi bi-house me-2"></i>Главная</a></li>
+                <li><a class="nav-link text-white activee" href="teachers.html"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
+                <li><a class="nav-link text-white" href="courses.html"><i class="bi bi-journals me-2"></i>Курсы</a></li>
+            </ul>
+        </aside>
+        <main class="content flex-grow-1 p-4">
+            <div class="shadow container-teacher">
+                <div class="teacher-box">
+                    <div class="info-teacher mb-4">
+                        <div class="header mb-3">
+                            <h3>Информация</h3>
+                            <div class="line"></div>
+                        </div>
+                        <div class="content">
+                            <p><strong>Название: </strong>Проф подготовка к демо-экзамену</p>
+                            <p><strong>Организация: </strong>ООО "ИНТЕХ"</p>
+                            <p><strong>Даты начала и завершения: </strong>01.01.2026-25.01.2026</p>
+                            <p><strong>Категории: </strong>Очно</p>
+                            <p><strong>Описание:</strong></p>
+                        </div>
+                    </div>
+                    <div class="cours-teacher">
+                        <div class="header mb-3">
+                            <h3>Информация</h3>
+                            <div class="line"></div>
+                        </div>
+                        <div class="content">
+                            <table class="table align-middle text-center">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>ФИО</th>
+                                        <th>Действия</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Клочева Е.А</td>
+                                        <td></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+    </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

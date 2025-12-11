@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Преподаватели</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+
+
+</head>
+
+<body class="bg-light">
+    <nav class="navbar  d-lg-none px-3">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+    </nav>
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Панель</h5>
+            <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex align-items-center mb-4">
+                <img src="../img/profile.png" class="rounded-circle me-3" width="50" height="50">
+                <div class="fw-semibold">Чупров Дмитрий</div>
+            </div>
+            <ul class="nav nav-pills flex-column gap-2">
+                <li><a class="nav-link text-white" href="index.html"><i class="bi bi-house me-2"></i>Главная</a></li>
+                <li><a class="nav-link text-white activee" href="teachers.html"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
+                <li><a class="nav-link text-white" href="courses.html"><i class="bi bi-journals me-2"></i>Курсы</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="d-flex">
+        <aside class="sidebar bg-dark text-white p-4 d-none d-lg-block">
+            <div class="d-flex align-items-center mb-4">
+                <img src="../img/profile.png" class="rounded-circle me-3" width="50" height="50">
+                <div class="fw-semibold">Чупров Дмитрий</div>
+            </div>
+            <ul class="nav nav-pills flex-column gap-2">
+                <li><a class="nav-link text-white" href="index.html"><i class="bi bi-house me-2"></i>Главная</a></li>
+                <li><a class="nav-link text-white activee" href="teachers.html"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
+                <li><a class="nav-link text-white" href="courses.html"><i class="bi bi-journals me-2"></i>Курсы</a></li>
+            </ul>
+        </aside>
+        <main class="content flex-grow-1 p-4" c>
+            <div class="d-flex justify-content-between align-items-center mb-4 top-panel">
+                <div class="nav">
+                    <a class="nav-link text-activee" href="#">Обзор</a>
+                    <a class="nav-link text-black" href="#">Добавить</a>
+                    <a class="nav-link text-black" href="#">Категории</a>
+                </div>
+                <div class="input-group search-i" style="width: 260px;">
+                    <span class="input-group-text bg-white search-input"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control search-input" placeholder="Поиск"">
+                </div>
+            </div>
+            <div class=" shadow containerr">
+                    <div class="boxx">
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Название</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Организация</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Категория</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Количество часов</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Дата начала</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Дата завершения</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Comments</label>
+                                <textarea class="form-control" placeholder=""></textarea>
+                            </div>
+                            <div class="col-12 d-flex justify-content-end mt-3">
+                                <button type="submit" class="btn btn-primary px-4">Создать</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
