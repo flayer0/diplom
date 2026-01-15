@@ -14,7 +14,7 @@
     <section class="login">
         <div class="login-card p-4 rounded-3 my-4">
             <div class="login-title pb-4">Вход</div>
-            <form action="#">
+            <form action="./scripts/login.php" method="POST">
                 <div class="input-wrapper pb-4">
                     <label for="login">Логин</label>
                     <input type="text" id="login" name="login" class="form-control styled-input" required>
@@ -23,7 +23,7 @@
                     <label for="password">Пароль</label>
                     <input type="password" id="password" name="password" class="form-control styled-input" required>
                 </div>
-                <button class="btn w-100 btn-login"><a href="./admin/index.html">Войти</a></button>
+                <button class="btn w-100 btn-login" type="submit">Войти</button>
             </form>
 
         </div>
