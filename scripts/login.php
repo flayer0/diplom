@@ -41,7 +41,7 @@ if ($user && ($password === $user['password'])) {
     
     // Редирект в зависимости от роли
     if ($_SESSION['user']['is_methodist']) {
-        header('Location: ../admin/index.html');
+        header('Location: ../admin/index.php');
     } else {
         header('Location: ../ff.php');
     }

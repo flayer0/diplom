@@ -4,14 +4,19 @@
     --active-color: rgba(79, 112, 148, 0.2);
     --white-color: #FFFFFF;
 }
-.form-control, .form-select{
+
+.form-control,
+.form-select {
     border: 0;
 }
-.form-control:focus, .form-select:focus{
+
+.form-control:focus,
+.form-select:focus {
     box-shadow: 0 0 0 0;
     border-color: transparent;
     outline: 0;
 }
+
 .activee {
     background-color: var(--active-color);
     color: var(--white-color);
@@ -115,7 +120,8 @@
     width: 95%;
     height: 1px;
 }
-.category .line{
+
+.category .line {
     width: 100%;
 }
 
@@ -184,6 +190,24 @@
     box-shadow: 0 0 0 0;
     border-color: transparent;
     outline: 0;
+}
+
+.stat-card-1 {
+    background: #4F7094;
+    color: white;
+    border: none;
+}
+
+.stat-card-2 {
+    background: #4f7094f3;
+    color: white;
+    border: none;
+}
+
+.stat-card-3 {
+    background: #4f7094f7;
+    color: white;
+    border: none;
 }
 
 @media (max-width: 768px) {

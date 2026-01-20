@@ -1,65 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php
+$title = 'Курсы';
+$headerName = 'добавитьКатегорию';
+require_once 'header.php';
+require_once 'headerAdditionally.php';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Преподаватели</title>
+?>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../plugins/select2/css/select2.min.css">
-
-</head>
-
-<body class="bg-light">
-    <nav class="navbar  d-lg-none px-3">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-            <span class="navbar-toggler-icon "></span>
-        </button>
-    </nav>
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileMenu">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Панель</h5>
-            <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="d-flex align-items-center mb-4">
-                <img src="../img/profile.png" class="rounded-circle me-3" width="50" height="50">
-                <div class="fw-semibold">Чупров Дмитрий</div>
-            </div>
-            <ul class="nav nav-pills flex-column gap-2">
-                <li><a class="nav-link text-white" href="index.html"><i class="bi bi-house me-2"></i>Главная</a></li>
-                <li><a class="nav-link text-white activee" href="teachers.html"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
-                <li><a class="nav-link text-white" href="courses.html"><i class="bi bi-journals me-2"></i>Курсы</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="d-flex">
-        <aside class="sidebar bg-dark text-white p-4 d-none d-lg-block">
-            <div class="d-flex align-items-center mb-4">
-                <img src="../img/profile.png" class="rounded-circle me-3" width="50" height="50">
-                <div class="fw-semibold">Чупров Дмитрий</div>
-            </div>
-            <ul class="nav nav-pills flex-column gap-2">
-                <li><a class="nav-link text-white" href="index.html"><i class="bi bi-house me-2"></i>Главная</a></li>
-                <li><a class="nav-link text-white activee" href="teachers.html"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
-                <li><a class="nav-link text-white" href="courses.html"><i class="bi bi-journals me-2"></i>Курсы</a></li>
-            </ul>
-        </aside>
-
-        <main class="content flex-grow-1 p-4">
-            <div class="d-flex justify-content-between align-items-center mb-4 top-panel">
-                <div class="nav">
-                    <a class="nav-link text-activee" href="#">Обзор</a>
-                    <a class="nav-link text-black" href="#">Добавить</a>
-                    <a class="nav-link text-black" href="#">Категории</a>
-                </div>
-                <div class="input-group search-i" style="width: 260px;">
-                    <span class="input-group-text bg-white search-input"><i class="bi bi-search"></i></span>
-                    <input type="text" class="form-control search-input" placeholder="Поиск">
-                </div>
-            </div>
 
             <div class="shadow containerr">
                 <div class="boxx">

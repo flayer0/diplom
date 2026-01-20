@@ -1,10 +1,14 @@
+<?php
+require_once '../scripts/connect.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Преподаватели</title>
+    <title><?php echo $title?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
 </head>
@@ -23,12 +27,12 @@
         <div class="offcanvas-body">
             <div class="d-flex align-items-center mb-4">
                 <img src="../img/profile.png" class="rounded-circle me-3" width="50" height="50">
-                <div class="fw-semibold">Чупров Дмитрий</div>
+                <div class="fw-semibold"><?=$_SESSION['user']['surname'],' ', $_SESSION['user']['name']?></div>
             </div>
             <ul class="nav nav-pills flex-column gap-2">
-                <li><a class="nav-link text-white" href="index.html"><i class="bi bi-house me-2"></i>Главная</a></li>
-                <li><a class="nav-link text-white activee" href="teachers.html"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
-                <li><a class="nav-link text-white" href="courses.html"><i class="bi bi-journals me-2"></i>Курсы</a></li>
+                <li><a class="nav-link text-white <?php if($title == 'Главная'){echo 'activee';}?>" href="index.php"><i class="bi bi-house me-2"></i>Главная</a></li>
+                <li><a class="nav-link text-white <?php if($title == 'Преподаватели'){echo 'activee';}?>" href="teachers.php"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
+                <li><a class="nav-link text-white <?php if($title == 'Курсы'){echo 'activee';}?>" href="courses.php"><i class="bi bi-journals me-2"></i>Курсы</a></li>
             </ul>
         </div>
     </div>
@@ -36,21 +40,11 @@
         <aside class="sidebar bg-dark text-white p-4 d-none d-lg-block">
             <div class="d-flex align-items-center mb-4">
                 <img src="../img/profile.png" class="rounded-circle me-3" width="50" height="50">
-                <div class="fw-semibold">Чупров Дмитрий</div>
+                <div class="fw-semibold"><?=$_SESSION['user']['surname'],' ', $_SESSION['user']['name']?></div>
             </div>
             <ul class="nav nav-pills flex-column gap-2">
-                <li><a class="nav-link text-white" href="index.html"><i class="bi bi-house me-2"></i>Главная</a></li>
-                <li><a class="nav-link text-white activee" href="teachers.html"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
-                <li><a class="nav-link text-white" href="courses.html"><i class="bi bi-journals me-2"></i>Курсы</a></li>
+                <li><a class="nav-link text-white <?php if($title == 'Главная'){echo 'activee';} ?>" href="index.php"><i class="bi bi-house me-2"></i>Главная</a></li>
+                <li><a class="nav-link text-white <?php if($title == 'Преподаватели'){echo 'activee';}?>" href="teachers.php"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
+                <li><a class="nav-link text-white <?php if($title == 'Курсы'){echo 'activee';}?>" href="courses.php"><i class="bi bi-journals me-2"></i>Курсы</a></li>
             </ul>
         </aside>
-
-
-    </div>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>

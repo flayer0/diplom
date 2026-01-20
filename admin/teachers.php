@@ -1,59 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php
+$title = 'Преподаватели';
+$headerName == 'Преподаватели';
+require_once 'header.php';
+require_once 'headerAdditionally.php';
+$teachers = $pdo->query('Select * from teachers');
+$courses = $pdo->query('Select * from courses');
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Преподаватели</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/style.css">
-</head>
-
-<body class="bg-light">
-    <nav class="navbar  d-lg-none px-3">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-            <span class="navbar-toggler-icon "></span>
-        </button>
-    </nav>
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileMenu">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Панель</h5>
-            <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="d-flex align-items-center mb-4">
-                <img src="../img/profile.png" class="rounded-circle me-3" width="50" height="50">
-                <div class="fw-semibold">Чупров Дмитрий</div>
-            </div>
-            <ul class="nav nav-pills flex-column gap-2">
-                <li><a class="nav-link text-white" href="index.html"><i class="bi bi-house me-2"></i>Главная</a></li>
-                <li><a class="nav-link text-white activee" href="teachers.html"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
-                <li><a class="nav-link text-white" href="courses.html"><i class="bi bi-journals me-2"></i>Курсы</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="d-flex">
-        <aside class="sidebar bg-dark text-white p-4 d-none d-lg-block">
-            <div class="d-flex align-items-center mb-4">
-                <img src="../img/profile.png" class="rounded-circle me-3" width="50" height="50">
-                <div class="fw-semibold">Чупров Дмитрий</div>
-            </div>
-            <ul class="nav nav-pills flex-column gap-2">
-                <li><a class="nav-link text-white" href="index.html"><i class="bi bi-house me-2"></i>Главная</a></li>
-                <li><a class="nav-link text-white activee" href="teachers.html"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
-                <li><a class="nav-link text-white" href="courses.html"><i class="bi bi-journals me-2"></i>Курсы</a></li>
-            </ul>
-        </aside>
-        <main class="content flex-grow-1 p-4">
-            <div class="d-flex justify-content-between align-items-center mb-4 top-panel">
-                <a href="#" class="btn btn-primarys px-4" data-bs-toggle="modal" data-bs-target="#addTeacherModal">
-                    Добавить
-                </a>
-                <div class="input-group" style="width: 260px;">
-                    <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
-                    <input type="text" class="form-control" placeholder="Поиск">
-                </div>
-            </div>
             <div class="table-responsive">
                 <table class="table align-middle">
                     <thead class="table-light">
@@ -64,8 +17,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?foreach($teachers as $teacher):?>
                         <tr>
-                            <td><a href="./teacher.html" class="text-decoration-none text-prymarys">Ключева Е.А</a></td>
+                            <td><a href="./teacher.html" class="text-decoration-none text-prymarys">
+                                <?= $teacher['surname'],' ', mb_substr($teacher['name'], 0, 1),'.', mb_substr($teacher['patronymic'], 0, 1),'.'?>
+                            </a></td>
                             <td>Информационные технологии (ИТ)…</td>
                             <td class="text-end">
                                 <a href="#" class="btn btn-primarys px-4" data-bs-toggle="modal"
@@ -74,6 +30,7 @@
                                 </a>
                             </td>
                         </tr>
+                        <?endforeach;?>
                     </tbody>
                 </table>
             </div>
@@ -124,8 +81,9 @@
                                 <label for="validationCustom04" class="form-label">Курсы</label>
                                 <select class="form-select" id="validationCustom04" required>
                                     <option selected disabled value="">Выберите...</option>
-                                    <option>Ye lf</option>
-                                    <option>gg</option>
+                                    <?foreach($courses as $cours):?>
+                                        <option value="/<?= $cours['id'] ?>"><?= $cours['title'] ?></option>
+                                    <?endforeach;?>
                                 </select>
 
                             </div>
