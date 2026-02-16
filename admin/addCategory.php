@@ -4,19 +4,20 @@ $headerName = 'добавитьКатегорию';
 require_once 'header.php';
 require_once 'headerAdditionally.php';
 
+$categories = $pdo->query('SELECT * FROM `courses_categories`');
 ?>
 
 
             <div class="shadow containerr">
                 <div class="boxx">
 
-                    <form class="row g-3">
+                    <form class="row g-3" method="post" action="../scripts/addCategory.php">
                         <div class="col-md-6">
                             <label class="form-label">Название</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="title">
                         </div>
                         <div class="col-6 justify-content-end d-flex align-items-end">
-                            <button type="submit" class="btn btn-primary px-4">Создать</button>
+                            <button type="submit" class="btn btn-primarys px-4">Создать</button>
                         </div>
                     </form>
 
@@ -24,10 +25,6 @@ require_once 'headerAdditionally.php';
                         <div class="header mb-3">
                             <div class="d-flex justify-content-between mb-3">
                                 <h3>Категории</h3>
-                                <div class="input-group search-i" style="width: 260px;">
-                                    <span class="input-group-text bg-white search-input"><i class="bi bi-search"></i></span>
-                                    <input type="text" class="form-control search-input" placeholder="Поиск">
-                                </div>
                             </div>
                             <div class="line"></div>
                         </div>
@@ -36,39 +33,17 @@ require_once 'headerAdditionally.php';
                             <table class="table align-middle text-center">
                                 <thead class="table-light">
                                     <tr>
-                                        <th class="text-start">Курсы</th>
-                                        <th>Статус</th>
-                                        <th>Действия</th>
+                                        <th>id</th>
+                                        <th>Название</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="text-start">
-                                            <a href="./teacher.html" class="text-decoration-none text-prymarys">
-                                                Проф подготовка к демо-экзамену
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <div class="circle circle-succesful"></div>Активно
-                                        </td>
-                                        <td></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="text-start">
-                                            <a href="./teacher.html" class="text-decoration-none text-prymarys">
-                                                Проф подготовка к демо-экзамену
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <div class="circle circle-danger"></div>Активно
-                                        </td>
-                                        <td>
-                                            <a href="#" class="text-black text-decoration-none">
-                                                <i class="bi bi-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <?foreach($categories as $category):?>
+                                        <tr>
+                                            <td><?=  $category['id']?></td>
+                                            <td><?= $category['title'] ?></td>
+                                        </tr>
+                                    <?endforeach?>
                                 </tbody>
                             </table>
                         </div>

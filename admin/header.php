@@ -33,6 +33,7 @@ session_start();
                 <li><a class="nav-link text-white <?php if($title == 'Главная'){echo 'activee';}?>" href="index.php"><i class="bi bi-house me-2"></i>Главная</a></li>
                 <li><a class="nav-link text-white <?php if($title == 'Преподаватели'){echo 'activee';}?>" href="teachers.php"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
                 <li><a class="nav-link text-white <?php if($title == 'Курсы'){echo 'activee';}?>" href="courses.php"><i class="bi bi-journals me-2"></i>Курсы</a></li>
+                <li><a class="nav-link text-white" href="../scripts/logout.php"><i class="bi bi-box-arrow-left me-2"></i>Выйти</a></li>
             </ul>
         </div>
     </div>
@@ -46,5 +47,6 @@ session_start();
                 <li><a class="nav-link text-white <?php if($title == 'Главная'){echo 'activee';} ?>" href="index.php"><i class="bi bi-house me-2"></i>Главная</a></li>
                 <li><a class="nav-link text-white <?php if($title == 'Преподаватели'){echo 'activee';}?>" href="teachers.php"><i class="bi bi-person me-2"></i>Преподаватели</a></li>
                 <li><a class="nav-link text-white <?php if($title == 'Курсы'){echo 'activee';}?>" href="courses.php"><i class="bi bi-journals me-2"></i>Курсы</a></li>
+                <li><a class="nav-link text-white" href="../scripts/logout.php"><i class="bi bi-box-arrow-left me-2"></i>Выйти</a></li>
             </ul>
         </aside>

@@ -5,6 +5,7 @@
                 <a class="nav-link <?= $headerName == 'Курсы' ? 'text-activee' : 'text-black' ?>" href="courses.php">Обзор</a>
                 <a class="nav-link <?= $headerName == 'добавитьКурс' ? 'text-activee' : 'text-black' ?>" href="addCourses.php">Добавить</a>
                 <a class="nav-link <?= $headerName == 'добавитьКатегорию' ? 'text-activee' : 'text-black' ?>" href="addCategory.php">Категории</a>
+                <a class="nav-link <?= $headerName == 'добавитьОрганизатора' ? 'text-activee' : 'text-black' ?>" href="addOrganizer.php">Организаторы</a>
             <?php else: ?>
                 <a class="nav-link <?= $headerName == 'Преподаватели' ? 'text-activee' : 'text-black' ?>" href="teachers.php">Обзор</a>
                 <a class="nav-link <?= $headerName == 'добавитьПреподавателя' ? 'text-activee' : 'text-black' ?>" href="addTeachers.php">Добавить</a>

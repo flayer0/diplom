@@ -4,7 +4,8 @@ $headerName = 'Курсы';
 require_once 'header.php';
 require_once 'headerAdditionally.php';
 $teachers = $pdo->query('Select * from teachers');
-$courses = $pdo->query('Select * from courses');
+$courses = $pdo->query('Select * from courses
+                ORDER by courses.end_date DESC');
 ?>
 
             <div class="table-responsive">
@@ -20,15 +21,17 @@ $courses = $pdo->query('Select * from courses');
                     <tbody>
                         <?foreach($courses as $cours):?>
                         <tr>
-                            <td class="text-start"><a href="./cours.html"
+                            <td class="text-start"><a href="./cours.php?id=<?= $cours['id'] ?>"
                                     class="text-decoration-none text-prymarys"><?= $cours['title'] ?></a></td>
                             <td><?= $cours['start_date'] ?></td>
                             <td><?= $cours['end_date'] ?></td>
                             <td>
-                                <a href="#" class="btn btn-primarys px-4" data-bs-toggle="modal"
-                                    data-bs-target="#addCoursTeacherModal">
-                                    Назначить
-                                </a>
+                                <?if($cours['end_date'] > date('Y-m-d')):?>
+                                    <a href="#" class="btn btn-primarys px-4" data-bs-toggle="modal"
+                                        data-bs-target="#addCoursTeacherModal">
+                                        Назначить
+                                    </a>
+                                <?endif;?>
                             </td>
                         </tr>
                         <?endforeach;?>
