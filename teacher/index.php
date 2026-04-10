@@ -3,7 +3,7 @@ $title = 'Преподаватели';
 $headerName == 'Преподаватели';
 require_once 'header.php';
 
-$id = $_GET['id'];
+$id = $_SESSION['user']['id'];
 
 $stmt = $pdo->prepare('
     SELECT 

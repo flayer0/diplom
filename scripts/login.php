@@ -38,7 +38,7 @@ if ($user && ($password === $user['password'])) {
     if ($_SESSION['user']['is_methodist']) {
         header('Location: ../admin/index.php');
     } else {
-        header('Location: ../ff.php');
+        header('Location: ../teacher/index.php');
     }
     exit();
 } else {

@@ -15,7 +15,6 @@ $courses = $pdo->query('Select * from courses
                             <th class="text-start">Название</th>
                             <th>Дата начала</th>
                             <th>Дата завершения</th>
-                            <th>Действия</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -25,14 +24,6 @@ $courses = $pdo->query('Select * from courses
                                     class="text-decoration-none text-prymarys"><?= $cours['title'] ?></a></td>
                             <td><?= $cours['start_date'] ?></td>
                             <td><?= $cours['end_date'] ?></td>
-                            <td>
-                                <?if($cours['end_date'] > date('Y-m-d')):?>
-                                    <a href="#" class="btn btn-primarys px-4" data-bs-toggle="modal"
-                                        data-bs-target="#addCoursTeacherModal">
-                                        Назначить
-                                    </a>
-                                <?endif;?>
-                            </td>
                         </tr>
                         <?endforeach;?>
                     </tbody>
